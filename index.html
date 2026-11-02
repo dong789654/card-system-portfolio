@@ -183,6 +183,9 @@ tr:last-child td{border-bottom:none}
 .card .t{font-size:14px;line-height:1.5}
 .card .chip{margin-top:2px}
 @media (max-width:640px){.q{grid-template-columns:1fr;gap:6px}.q .qh{position:static}}
+table.vol td.r,table.vol th.r{text-align:right;font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+table.vol tr.sum td{font-weight:600}
+table.vol tr.sub td{color:var(--muted)}
 .note{font-size:13px;color:var(--muted);border-left:2px solid var(--rule);padding-left:14px;max-width:80ch}
 </style>
 
@@ -205,7 +208,7 @@ tr:last-child td{border-bottom:none}
 </header>
 
 <nav class="toc" aria-label="목차">
-  <a href="#role">주요 역할</a><a href="#wins">주요 성과</a><a href="#factory">상품팩토리</a><a href="#voucher">공공 바우처</a><a href="#timeline">시간 흐름</a><a href="#ai">AI·개발</a><a href="#data">데이터</a><a href="#doc">디자인·문서</a><a href="#evidence">근거 자료</a><a href="#domain">도메인·업무 방식</a><a href="#all">전체 포트폴리오</a>
+  <a href="#role">주요 역할</a><a href="#wins">주요 성과</a><a href="#volume">결제액</a><a href="#factory">상품팩토리</a><a href="#voucher">공공 바우처</a><a href="#timeline">시간 흐름</a><a href="#ai">AI·개발</a><a href="#data">데이터</a><a href="#doc">디자인·문서</a><a href="#evidence">근거 자료</a><a href="#domain">도메인·업무 방식</a><a href="#all">전체 포트폴리오</a>
 </nav>
 
 <section id="role">
@@ -252,7 +255,7 @@ tr:last-child td{border-bottom:none}
     <p>팀 KPI·회고 위키와 메일에 기록된 값입니다.</p>
   </div>
   <div class="wins">
-    <div class="win"><b>2,627억 원</b><h3>선불카드 결제액</h3><p>2024년 상반기 실적, 상반기 목표 1,931억 원 대비 136%. 연간 예상 7,000억 원 (연 목표 대비 121%)</p></div>
+    <div class="win"><b>5,933억 원</b><h3>선불카드 점외 결제액 (2025)</h3><p>2024년 4,152억 원에서 +42.9%. 해외는 1,077억 원 → 2,557억 원으로 2.4배</p></div>
     <div class="win"><b>140만 매</b><h3>Npay 머니카드 누적 발급</h3><p>주력 상품의 발급·승인·매입·해외거래·CS를 단독 운영</p></div>
     <div class="win"><b>142억 원</b><h3>민생회복 소비쿠폰</h3><p>선불카드 최초 바우처. 신청 7.2만 명, 소진율 79.4%로 KPI 초과, 1·2차 정산 약 204억 원 마감</p></div>
     <div class="win"><b>99%+</b><h3>외국인 결제 커버리지</h3><p>Visa·MC에 AMEX·JCB·Discover 3DS와 UnionPay를 더해 크로스보더 글로벌카드 99% 이상 커버</p></div>
@@ -262,6 +265,26 @@ tr:last-child td{border-bottom:none}
     <div class="win"><b>30분 → 15초</b><h3>가맹점 신청서류 자동화</h3><p>카드사별 신청서·위임장 작성을 직접 만든 프로그램으로 대체</p></div>
     <div class="win"><b>58개 시나리오</b><h3>상담지원 LLM</h3><p>상담 티켓 5,800건을 임베딩·클러스터링해 시나리오를 만들고 RAG 챗봇을 CS센터에 배포</p></div>
   </div>
+</section>
+
+<section id="volume">
+  <div class="sec-head">
+    <span class="part">02-1 · 선불카드 결제액</span>
+    <h2>운영하는 카드의 결제 규모</h2>
+    <p>결제금융 책임조직 KPI의 선불카드 결제금액입니다. 점외는 네이버페이 밖 카드 가맹점에서 쓴 금액, 점내는 네이버페이 가맹점 안에서 쓴 금액입니다. 단위는 억 원입니다.</p>
+  </div>
+  <div class="tbl">
+    <table class="vol">
+      <thead><tr><th>구분</th><th class="r">2024</th><th class="r">2025</th><th class="r">2026 상반기</th><th>비고</th></tr></thead>
+      <tbody>
+        <tr class="sum"><td>점외 합계</td><td class="r">4,152</td><td class="r">5,933</td><td class="r">3,620</td><td>2025 +42.9% · 2026 목표 7,500억 대비 상반기 48.3%</td></tr>
+        <tr><td>&nbsp;&nbsp;국내 점외</td><td class="r">3,075</td><td class="r">3,376</td><td class="r">2,288</td><td>2024년은 상품권 결제 비중이 높았음. 2026 상반기는 합계에서 해외를 뺀 값</td></tr>
+        <tr><td>&nbsp;&nbsp;해외</td><td class="r">1,077</td><td class="r">2,557</td><td class="r">1,332</td><td>2025 +137%. 2026 목표 3,300억 대비 상반기 40.4%</td></tr>
+        <tr class="sub"><td>점내</td><td class="r">확인 필요</td><td class="r">확인 필요</td><td class="r">확인 필요</td><td>KPI 페이지에 별도 집계 없음. 데이터 추출 후 반영</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note">2024년 상반기 팀 KPI 보고에는 선불카드 결제액이 2,627억 원(상반기 목표 1,931억 원 대비 136%)으로 기록돼 있습니다. 위 표의 점외 기준과 집계 범위가 달라 따로 적었습니다.</p>
 </section>
 
 <section id="factory">
@@ -339,7 +362,7 @@ tr:last-child td{border-bottom:none}
         <li>원승인 없는 취소매입(캐시백 등) 처리 기준, 해외 소진거래 원거래 승인번호 안내, 추가승인 처리시각 안내</li>
         <li>승인거래 일배치 대사, 카드신청 연락처 표기, 발송 후 동시 사용등록 이슈 해결</li>
         <li>카드사 inbound 통신·SFTP 이전, 애플페이 설계 착수, 팀 SQL 스터디 개설</li>
-      </ul><p class="hl"><b>성과</b> 선불카드 결제액 상반기 2,627억 원 (목표 대비 136%)</p></div>
+      </ul><p class="hl"><b>성과</b> 선불카드 결제액 상반기 2,627억 원 (팀 KPI 기준, 목표 대비 136%)</p></div>
     </div>
     <div class="phase">
       <div class="when">2024.07 — 2024.12<span>운영을 시스템으로</span></div>
